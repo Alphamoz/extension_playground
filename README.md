@@ -2,6 +2,8 @@
 Welcome to my docker to develop BlueOS Extension
 This is a repo to build a simple extension using docker for BlueOS Extension
 
+#### _Please install Docker and register before proceed to get a username for build docker image._
+
 ## To build, use this command
 
   ```shell
@@ -13,7 +15,10 @@ This is a repo to build a simple extension using docker for BlueOS Extension
   docker buildx build --platform linux/arm/v7,linux/amd64 . -t my_docker_username/extension_playground:v0.0.1 --output type=registry
   ```
 
-This docker is only showing logs using logging and print function.
+## To run this image: 
+Open the docker, go to images tab, search for your built image and run the image to see the result.
+
+NOTE: This docker is only showing logs using logging and print function.
 
 
 
