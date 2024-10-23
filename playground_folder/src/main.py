@@ -13,7 +13,7 @@ logging.error("This is an error message.")
 
 def main():
     logging.info("Starting the application...")
-    print("Mantap jiwa")
+    print("Welcome, Apotek Tutup")
 
 if __name__ == "__main__":
     main()
