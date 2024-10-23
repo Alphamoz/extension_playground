@@ -7,34 +7,13 @@ RUN mkdir -p /home/pi
 
 # Install dvl service
 COPY playground_folder /home/pi/playground_folder
-# COPY dvl-a50 /home/pi/dvl-a50
-# make the python program unix
+
+# make the python program unix because its made in windows
 RUN dos2unix /home/pi/playground_folder/src/*
-# RUN dos2unix /home/pi/dvl-a50/*
-# RUN chmod +x /home/pi/playground_folder/src/*
-# RUN cd /home/pi/dvl-a50 && pip3 install .
+
 
 LABEL version="0.0.1"
-# not using permission
-# LABEL permissions='\
-# {\
-#  "ExposedPorts": {\
-#    "9001/tcp": {}\
-#   },\
-#   "HostConfig": {\
-#     "Binds":["/root/.config:/root/.config"],\
-#     "ExtraHosts": [\
-#       "host.docker.internal:host-gateway"\
-#     ],\
-#     "PortBindings": {\
-#       "9001/tcp": [\
-#         {\
-#           "HostPort": ""\
-#         }\
-#       ]\
-#     }\
-#   }\
-# }'
+
 LABEL authors='[\
     {\
         "name": "Jason Jeremy",\
@@ -55,7 +34,5 @@ LABEL links='{\
         "website": "-",\
         "support": "-"\
     }'
-# no requirements
-# LABEL requirements="core >= 1.1"
 
 ENTRYPOINT ["/home/pi/playground_folder/src/main.py"]
