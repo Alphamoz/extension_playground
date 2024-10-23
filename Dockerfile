@@ -5,10 +5,10 @@ RUN apt-get update && apt-get install -y nmap dos2unix && rm -rf /var/lib/apt/li
 # Create default user folder
 RUN mkdir -p /home/pi
 
-# Install the files
+# Copy the files
 COPY playground_folder /home/pi/playground_folder
 
-# make the python program unix because its made in windows
+# Make the python program unix because its made in windows
 RUN dos2unix /home/pi/playground_folder/src/*
 
 
@@ -25,9 +25,9 @@ LABEL company='{\
         "name": "Rovostech",\
         "email": "jason@rovostech.com"\
     }'
-LABEL type="playground_extension_dvl"
+LABEL type="extension_playground"
 LABEL tags='[\
-        "playground_dvl",\
+        "playground",\
     ]'
 LABEL readme='-'
 LABEL links='{\
