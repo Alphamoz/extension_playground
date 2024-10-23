@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y nmap dos2unix && rm -rf /var/lib/apt/li
 # Create default user folder
 RUN mkdir -p /home/pi
 
-# Install dvl service
+# Install the files
 COPY playground_folder /home/pi/playground_folder
 
 # make the python program unix because its made in windows
